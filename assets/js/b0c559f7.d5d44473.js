@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmonday_documentation=self.webpackChunkmonday_documentation||[]).push([[496],{782:o=>{o.exports=JSON.parse('{"label":"facebook","permalink":"/monday-documentation-deployment/blog/tags/facebook","allTagsPath":"/monday-documentation-deployment/blog/tags","count":1}')}}]);
