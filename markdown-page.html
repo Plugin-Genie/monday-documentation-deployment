@@ -1,0 +1,115 @@
+<h1 id="monday">monday</h1>
+<p>monday is a work OS where teams create and shape their own workflows in minutes, code-free. </p>
+<h2 id="publisher-plugin-genie">Publisher: Plugin Genie</h2>
+<p>Plugin Genie LLC is committed to providing the best possible experience using Monday with Power Automate.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In order to use this connector, you will need the following:</p>
+<ul>
+<li>An active monday.com account</li>
+<li><strong>Have installed the Microsoft Power Automate app from the monday.com marketplace and subscribed to one of the plans</strong></li>
+<li>A Power Automate plan</li>
+</ul>
+<h2 id="supported-operations">Supported Operations</h2>
+<h3 id="triggers">Triggers</h3>
+<ul>
+<li><code>When an item is created</code> - Triggers when an item in monday.com is created. It returns the item name and ID.</li>
+<li><code>When a column changes</code> - Triggers when a specific column in monday.com changes for a specific workspace and board. For example, if the Date column is changed for an item. It returns the item name, ID, column values, along with the previous and new column value.</li>
+<li><code>When any column changes</code> - Triggers when any column in monday.com changes for a specific workspace and board. It returns the item name, ID, and column values, along with the previous and new column value.</li>
+<li><code>When an item&#39;s name changes</code> - Triggers when the name for a monday.com item is changed for a specific workspace and board. It returns the item name, ID, the previous item name, and the column values.</li>
+<li><code>When a new update is posted</code> - Triggers when a new update is posted on a monday.com item for a specific workspace and board. It returns the item name, ID, the update body, the text update body, the column values for the item, and the name/email of the user who added the update.</li>
+<li><code>When a subitem is created</code> - Triggers when a monday.com subitem is created for a specific workspace and board. It returns the name and ID of the subitem.</li>
+<li><code>When a subitem&#39;s name changes</code> - Triggers when the name of a monday.com subitem is changed for a specific workspace and board. It returns the subitem name, ID, the previous subitem name, and the column values of the subitem.</li>
+<li><code>When any subitem column changes</code> - Triggers when any column for a monday.com subitem changes for a specific workspace and board. It returns the subitem name, ID, the new column value, the previous column value, and the rest of the subitem&#39;s column values.</li>
+</ul>
+<h3 id="actions">Actions</h3>
+<h4 id="creation">Creation</h4>
+<ul>
+<li><code>Create an item</code> - Creates an item in monday.com with all the supported column values. It returns the ID of the created item.</li>
+<li><code>Create a board</code> - Creates a monday.com board in the specified workspace. It returns the ID of the created board.</li>
+<li><code>Create a column</code> - Creates a monday.com column in the specified workspace and board. It returns the ID of the created column, along with the title and description.</li>
+<li><code>Create a group</code> - Creates a monday.com group in the specified workspace and board. It returns the ID of the created group.</li>
+<li><code>Create a notification</code> - Creates a notification in monday.com for a specific user. The notification can be added to either a board or an item. </li>
+<li><code>Create a subitem</code> - Creates a subitem in monday.com for a specific parent item in the specified workspace and board. It allows the user to specify all the supported column values for the subitem. Returns the ID of the subitem and the ID of the subitem board.</li>
+<li><code>Create a workspace</code> - Creates an open workspace in monday.com. Returns the ID of the workspace.</li>
+<li><code>Create an update</code> - Creates an update for a specified item in monday.com. Returns the ID of the update.</li>
+</ul>
+<h4 id="data-retrieval">Data Retrieval</h4>
+<ul>
+<li><code>Get tags</code> - Gets all the tags in your monday.com account. Returns the name of each tag.</li>
+<li><code>Get users</code> - Gets all the users in your monday.com account. Returns the name and email of each user.</li>
+<li><code>Get items</code> - Gets all the items for a specified workspace, board, and group. Returns the name and ID of each item.</li>
+<li><code>Get an item by ID</code> - Gets an item for a specified item ID. Returns the item ID, name, and column values.</li>
+</ul>
+<h3 id="obtaining-credentials">Obtaining Credentials</h3>
+<p>You need an active monday.com account. You also need to have installed the Microsoft Power Automate app in monday.com and signed up for a subscription to it. </p>
+<p>Once this has been done, sign in to the monday connector in Power Automate. This will authenticate your connection between monday.com and Power Automate to allow you to start using the connector.</p>
+<h3 id="getting-started">Getting Started</h3>
+<ol>
+<li>In monday.com, search the marketplace for the Microsoft Power Automate app.</li>
+<li>Subscribe to one of the app&#39;s plans and install the app. </li>
+<li>If desired, add the board views: Power Automate Help or Power Automate App Usage. The Power Automate Help view links to the documentation for the connector. The Power Automate App Usage view can be used to track the number of executions for each trigger/action for this connector to help avoid reaching your subscription limit.</li>
+<li>In Power Automate, search for the &quot;monday&quot; connector for an action or a trigger. </li>
+<li>After adding the monday action/trigger, sign in to start using it.</li>
+</ol>
+<h2 id="known-issues-and-limitations">Known Issues and Limitations</h2>
+<h3 id="supported-column-types">Supported Column Types</h3>
+<p>Currently, only the following column types can be read or created in actions and triggers:</p>
+<ul>
+<li>Boolean</li>
+<li>Date</li>
+<li>Dropdown</li>
+<li>Email</li>
+<li>Hour</li>
+<li>Label</li>
+<li>Link</li>
+<li>Location</li>
+<li>Long Text</li>
+<li>Numeric</li>
+<li>People</li>
+<li>Phone</li>
+<li>Priority</li>
+<li>Rating</li>
+<li>Status</li>
+<li>Tag</li>
+<li>Text</li>
+<li>Timeline</li>
+<li>Timezone</li>
+<li>Week</li>
+<li>World Clock</li>
+</ul>
+<p>The following column types are not supported:</p>
+<ul>
+<li>Auto number</li>
+<li>Button</li>
+<li>Color Picker</li>
+<li>Connect Boards</li>
+<li>Country</li>
+<li>Creation Log</li>
+<li>Dependency</li>
+<li>Files (assets)</li>
+<li>Formula</li>
+<li>Last Updated At</li>
+<li>Mirror</li>
+<li>Person (deprecated)</li>
+<li>Progress Tracking</li>
+<li>Team (deprecated)</li>
+<li>Time Tracking</li>
+<li>Vote</li>
+</ul>
+<h2 id="app-usage">App Usage</h2>
+<p>The Microsoft Power Automate app installed from the monday.com marketplace contains a Power Automate App Usage view. This view can be added to a board to track the number of executions of each trigger/action per month. It&#39;s useful to make sure you don&#39;t exceed your subscription limits. If you need more executions than your subscription currently allows, the board also contains a button to upgrade your plan to a higher tier.</p>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<h3 id="i-uninstalled-the-microsoft-power-automate-app-in-monday-com-and-reinstalled-it-again-now-it-is-no-longer-working-and-i-m-unable-to-successfully-execute-actions-triggers-in-the-monday-connector-how-do-i-fix-the-connector-">I uninstalled the Microsoft Power Automate app in monday.com and reinstalled it again. Now it is no longer working and I&#39;m unable to successfully execute actions/triggers in the monday connector. How do I fix the connector?</h3>
+<p>When the Microsoft Power Automate app is uninstalled and reinstalled, the credentials are reset. To fix the connector, you need to re-authenticate your monday connector in Power Automate. </p>
+<p>This can be done by going to Data -&gt; Connections in the Power Automate sidebar. Then find the &quot;monday&quot; connection and click on it. At the top, click the &quot;Switch account&quot; button. This brings up a popup to re-authenticate your connection between monday.com and Power Automate. Click the Authorize button at the bottom of the popup. Your connection should now be restored and your actions/triggers should work again.</p>
+<h3 id="i-m-seeing-a-not-authenticated-error-when-executing-a-monday-action-trigger-in-power-automate-and-my-actions-triggers-have-stopped-working-how-can-i-fix-this-">I&#39;m seeing a &quot;Not Authenticated&quot; error when executing a monday action/trigger in Power Automate and my actions/triggers have stopped working. How can I fix this?</h3>
+<p>This can occur when your connection between monday.com and Power Automate has been invalidated. One way this can occur is by uninstalling the Microsoft Power Automate app in monday.com.</p>
+<p>To fix this issue, go to Data -&gt; Connections in the Power Automate sidebar. Then find the &quot;monday&quot; connection and click on it. At the top, click the &quot;Switch account&quot; button. This brings up a popup to re-authenticate your connection between monday.com and Power Automate. Click the Authorize button at the bottom of the popup. Your connection should now be restored and your actions/triggers should now work again.</p>
+<h3 id="when-executing-a-monday-action-trigger-in-power-automate-it-does-not-work-i-see-the-error-your-monday-com-power-automate-app-is-over-the-execution-limit-if-you-need-more-executions-please-purchase-a-higher-plan-for-the-microsoft-power-automate-app-in-monday-com-how-do-i-fix-this-">When executing a monday action/trigger in Power Automate, it does not work. I see the error &quot;Your monday.com Power Automate app is over the execution limit. If you need more executions, please purchase a higher plan for the Microsoft Power Automate app in monday.com&quot;. How do I fix this?</h3>
+<p>This occurs when you&#39;ve used all the executions your Microsoft Power Automate subscription plan in monday.com currently supports. When this happens, actions/triggers will fail to execute until the next month, unless a higher level subscription is purchased. </p>
+<p>If you need more executions, you can purchase a higher level subscription to the Microsoft Power Automate app in monday.com. Once you&#39;ve done so, your actions/triggers should start working again within 5 minutes.</p>
+<h2 id="deployment-instructions">Deployment Instructions</h2>
+<p>Please use <a href="https://docs.microsoft.com/en-us/connectors/custom-connectors/paconn-cli">these instructions</a> to deploy this connector as custom connector in Microsoft Power Automate and Power Apps.</p>
+<h2 id="further-support">Further Support</h2>
+<p>Please view <a href="https://plugingenie.com/docs/intro/">our documentation</a> for tutorials on how to set up the integration.</p>
+<p>For further support, you can contact us at support@plugingenie.com - we&#39;re always happy to help.</p>
