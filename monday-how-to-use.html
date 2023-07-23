@@ -2,10 +2,17 @@
     <link rel="canonical" href="https://plugingenie.com/styles.css" data-rh="true">
     <link rel="alternate" href="https://plugingenie.com/styles.css" hreflang="en" data-rh="true">
     <link rel="alternate" href="https://plugingenie.com/styles.css" hreflang="x-default" data-rh="true">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" hreflang="x-default" data-rh="true">
     <style>
         body {
             margin: 50px;
             background-color: white;
+            font: 16px "Figtree", "Lucida Grande", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            color: #0073ea;
+            text-decoration: none;
         }
 
         h3 {
@@ -19,59 +26,88 @@
 </head>
 <body>
     <h1>Prerequisites</h1>
-    <p>You will need an active Power Automate account and access to premium plugins.</p>
+    <p>You will need an active Power Automate account and access to premium plugins. If you don't have a Power Automate account, you can follow these directions to sign up for one: 
+        <a href="https://learn.microsoft.com/en-us/power-automate/sign-up-sign-in" target="_blank">Sign up and sign in for Power Automate</a>.
+    </p>
     <h1 id="getting-started">Getting Started</h1>
-    <p>This guide will help you integrate Power Automate with monday.com. In this guide, we will create a new Power Automate flow using the &quot;When an item is created&quot; monday trigger, then save the item name to an Excel spreadsheet.</p>
+    <h2>Add the Power Automate App Usage Board View</h2>
+    <h3>1. In a new or existing board, click the plus button to create a new board view.</h3>
+    <img src="/img/monday-how-to-use/new-board-view-button.png" alt="My flows button" style="max-width:250px"/>
+
+    <h3>2. Click the "Apps" option in the menu.</h3>
+    <img src="/img/monday-how-to-use/apps.png" alt="My flows button" style="max-width:350px"/>
+
+    <h3>3. Click the "Open in board" button for the Power Automate App Usage board view.</h3>
+    <img src="/img/monday-how-to-use/installed-apps.png" alt="My flows button" style="max-width:700px"/>
+    
+    <h3>4. The Power Automate App Usage board view has now been added to your board.</h3>
+    <p>
+        This board view initially has information on how to set up the integration. It also includes a video at the bottom showing how to add a monday action/trigger to a Power Automate flow.
+    </p>
+    <img src="/img/monday-how-to-use/boardview.png" alt="My flows button" style="max-width:700px"/>
+    <p>
+        Once you've executed a monday action/trigger in Power Automate, navigate back to this board view 
+        and refresh the page to view the usage of the integration. This is helpful to make sure you're 
+        under your subscription limit. It also allows upgrading your subscription if needed.
+    </p>
+    <img src="/img/monday-how-to-use/app-usage.png" alt="My flows button" style="max-width:700px"/>
+
+
+    <h2>Create a Flow in Power Automate</h2>
+
+    <p>In this section, we will show how to create a new Power Automate flow using the &quot;When an item is created&quot; monday trigger, then save the item name to an Excel spreadsheet.</p>
 
     <p>If instead you would like to create an action instead of a trigger, please follow <a href="https://plugingenie.com/docs/action-creation" target="_blank">our documentation</a> for how to do this.</p>
-    <h2 id="create-a-new-power-automate-flow-using-the-monday-com-connector">Create a new Power Automate flow using the monday.com connector</h2>
-    <p>To get started, we will create a new Power Automate flow based on trigger. We&#39;ll authenticate the connector with monday.com. Finally, we&#39;ll use the output of the trigger in a Power Automate action.</p>
-    <h3 id="1-in-power-automate-click-on-my-flows-in-the-left-sidebar">1. In Power Automate, click on &quot;My flows&quot; in the left sidebar</h3>
+    
+    <h3 id="1-in-power-automate-click-on-my-flows-in-the-left-sidebar">1. Navigate to <a href="https://make.powerautomate.com" target="_blank">Power Automate</a>.</h3>
+    <p>You can also access this link from within monday via the Power Automate App Usage board view.</p>
+
+    <h3 id="1-in-power-automate-click-on-my-flows-in-the-left-sidebar">2. In Power Automate, click on &quot;My flows&quot; in the left sidebar</h3>
     
     <img src="/img/my-flows.png" alt="My flows button" style="max-width:250px"/>
 
 
-    <h3 id="2-click-the-new-flow-button">2. Click the &quot;New flow&quot; button</h3>
+    <h3 id="2-click-the-new-flow-button">3. Click the &quot;New flow&quot; button</h3>
     <img src="/img/new-flow.png" alt="New flow button" style="max-width:120px"/>
     
 
-    <h3 id="3-select-automated-cloud-flow-">3. Select &quot;Automated cloud flow&quot;</h3>
+    <h3 id="3-select-automated-cloud-flow-">4. Select &quot;Automated cloud flow&quot;</h3>
     
     <img src="/img/automated-cloud-flow.png" alt="Automated cloud flow button" style="max-width:300px"/>
     
 
-    <h3 id="4-add-a-name-for-your-flow-then-search-for-monday-in-the-search-box-">4. Add a name for your flow. Then search for &quot;monday&quot; in the search box.</h3>
+    <h3 id="4-add-a-name-for-your-flow-then-search-for-monday-in-the-search-box-">5. Add a name for your flow. Then search for &quot;monday&quot; in the search box.</h3>
     
     <img src="/img/create-automated-flow.png" alt="Create automated flow" style="max-width:800px"/>
 
-    <h3 id="5-select-the-trigger-when-an-item-is-created-then-click-the-create-button-">5. Select the trigger &quot;When an item is created&quot;, then click the &quot;Create&quot; button.</h3>
+    <h3 id="5-select-the-trigger-when-an-item-is-created-then-click-the-create-button-">6. Select the trigger &quot;When an item is created&quot;, then click the &quot;Create&quot; button.</h3>
 
     <img src="/img/select-when-an-item-created.png" alt="Select When an item is created" style="max-width:800px"/>
 
-    <h3 id="6-click-the-sign-in-button-to-authenticate-power-automate-with-monday-com">6. Click the &quot;Sign in&quot; button to authenticate Power Automate with monday.com</h3>
+    <h3 id="6-click-the-sign-in-button-to-authenticate-power-automate-with-monday-com">7. Click the &quot;Sign in&quot; button to authenticate Power Automate with monday.com</h3>
     
     <img src="/img/sign-in.png" alt="Sign in" style="max-width:600px"/>
     
 
-    <h3 id="7-a-new-small-window-will-pop-up-scroll-down-and-click-the-authorize-button-this-allows-power-automate-to-access-and-create-data-in-monday-com-">7. A new small window will pop up. Scroll down and click the &quot;Authorize&quot; button. This allows Power Automate to access and create data in monday.com.</h3>
+    <h3 id="7-a-new-small-window-will-pop-up-scroll-down-and-click-the-authorize-button-this-allows-power-automate-to-access-and-create-data-in-monday-com-">8. A new small window will pop up. Scroll down and click the &quot;Authorize&quot; button. This allows Power Automate to access and create data in monday.com.</h3>
     
     <img src="/img/authorize.png" alt="Authorize" style="max-width:400px"/>
     
 
-    <h3 id="8-select-your-workspace-and-board-when-an-item-is-created-on-this-board-it-will-run-the-trigger-">8. Select your workspace and board. When an item is created on this board, it will run the trigger.</h3>
+    <h3 id="8-select-your-workspace-and-board-when-an-item-is-created-on-this-board-it-will-run-the-trigger-">9. Select your workspace and board. When an item is created on this board, it will run the trigger.</h3>
     
     <img src="/img/when-an-item-created-trigger.png" alt="Select workspace and board" style="max-width:700px"/>
     
 
-    <h3 id="9-add-whichever-steps-you-would-like-to-execute-when-the-trigger-is-triggered-using-the-data-from-your-monday-com-trigger-">9. Add whichever steps you would like to execute when the trigger is triggered, using the data from your monday.com trigger.</h3>
+    <h3 id="9-add-whichever-steps-you-would-like-to-execute-when-the-trigger-is-triggered-using-the-data-from-your-monday-com-trigger-">10. Add whichever steps you would like to execute when the trigger is triggered, using the data from your monday.com trigger.</h3>
     <p>For example, here we&#39;ve selected Excel&#39;s &quot;Add a row into a table&quot; action to add the item&#39;s data into an Excel spreadsheet.</p>
     <p>Click inside the Name field, which will then automatically open the &quot;Dynamic content&quot; window. In this window, you can select the fields that are returned by the trigger. In this case, we&#39;re selecting the Item Name field. </p>
     <p><em>Note: Other monday triggers, such as the &quot;When a column changes&quot; trigger, contain a lot more dynamic content (such as the columns for the item).</em></p>
 
     <img src="/img/field-selection.png" alt="Select a Power Automate field" style="max-width:700px">
     
-    <h3 id="10-finally-save-the-flow-by-clicking-the-save-button-">10. Finally, save the flow by clicking the Save button.</h3>
-    <p>When you create an item in monday.com, it will now execute your Power Automate flow.</p>
+    <h3 id="10-finally-save-the-flow-by-clicking-the-save-button-">11. Finally, save the flow by clicking the Save button.</h3>
+    <p>When you create an item in monday.com, it will now execute your Power Automate flow, which will save the name of the created item to Excel.</p>
     
     <img src="/img/excel-example.png" alt="Excel action example" style="max-width:700px"/>
 
